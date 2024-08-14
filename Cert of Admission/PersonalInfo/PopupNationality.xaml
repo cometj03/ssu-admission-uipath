@@ -1,9 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="PopupNationality" this:PopupNationality.national="일본" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PopupNationality" this:PopupNationality.nation="일본" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="national" Type="InArgument(x:String)" />
+    <x:Property Name="nation" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>859.2,2196</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>796.8,2160</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -105,7 +105,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PopupNationality" sap:VirtualizedContainerService.HintSize="512,2131.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PopupNationality" sap:VirtualizedContainerService.HintSize="512,2095.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -160,13 +160,13 @@
         <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABCdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gMTAwCrt8d6MAAAIzSURBVDhPdZHfUxJRFMf903qr/6Gppx6MmqZ3ZyyaXpy0iTFjSkEMlSF/INqIYMavUYIVFFjcgWWBZXeBlNYfBAv7457u7tJkNn3n3odz7/nc873njMB/hAwNA1M4QvAvoAFSQJMAXQF0EEgaDBAo+jnWTQC/ocmAOqA2oE2ATKnAy3ChQE8FGSEVp/wNaAi0Lsh8fd9NeMeEI+fGro1TimeakK8cazqDRgxjuoam1QuN2hL8Vspl6VGuSMHhSMwEi5sJOiZjb9eBoRSR80/WXU/Sr+52yYUo5xldsgSbO5mzwz5IOmD8Rv+QUQBbFfNz45JvIjtlqcbnVsuf7szcmyUXNnI+CSScZgJ6a3Ad3AtQulmPnXK/Lvnnm1xqiQ/enn1ozy1+ZaM96OsAzjMaqUcdFa4kpc3xoe2AY2V9hTy8NfXoafz9RHiehXYfNNwUHZABfsgQzTMRsorXJUCUrN9/aXu+vTO69mEPeC8ZPwe1D2gI9ADWv1GeVO3xm+VYXWpoQIlqpi0V+ogFqAKcAnRNw6alSxUeWKfXCqLVG3sXOo4x4jO725cqfNw7WPxysBpJLgfCrY70B8D0mM0ZIBvjDp9zl9hKku5Q7K0vNOnZ9IQJ1+fwi2mHOLhW4edATZ5U0tXv+0WeYJpEic0w9USJTbOnSVpI0/xRme/ikZoA3rKiUXSlVOUYoUXXeLrG1YRWs33OCM0cVcqeFMs1TlJU/PQQMEZmhjeFR2ms37cAvwDn8akHoSXZUQAAAABJRU5ErkJggg==" InformativeScreenshot="52bfada1b187e0b26ec6e9d5f637c79e.jpg" Selector="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" Title="외국인 유학생정보 시스템" Url="https://www.hikorea.go.kr/isi/index.html" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 국적코드 검색" sap:VirtualizedContainerService.HintSize="449.6,1484.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="fc861434-ddc3-4470-988a-45c0e24ccb21" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 국적코드 검색" sap:VirtualizedContainerService.HintSize="449.6,1448.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="fc861434-ddc3-4470-988a-45c0e24ccb21" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1244.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1208.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -203,7 +203,7 @@
               </uix:NTypeInto.Target>
               <uix:NTypeInto.Text>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">national + "[k(Enter)]"</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">nation + "[k(Enter)]"</CSharpValue>
                 </InArgument>
               </uix:NTypeInto.Text>
             </uix:NTypeInto>
@@ -211,7 +211,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" DesignTimeRectangle="761, 361, 17, 16" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='oOutputTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='oNatCd' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='oOutputTable' tag='TABLE' /&gt;&lt;webctrl id='oNatCd' type='checkbox' tag='INPUT' class='' aaname='JPN' /&gt;" Guid="e86ff60a-1f39-447c-862e-b9c761ded307" InformativeScreenshot="8292795cfeab1137342014abc7b0adb1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='NatiList' title='국적코드 검색' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="719, 325, 100, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl id='oOutputTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='선택' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='oOutputTable' tag='TABLE' /&gt;&lt;webctrl aaname='선택' type='' tag='TH' class='thTitle 80' check:innerText='선택' /&gt;" Guid="b2807409-332c-4f0d-a975-0cdae2723c71" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -225,7 +225,7 @@
                   <uix:VerifyExecutionOptions.Target>
                     <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/NatiCdListR.isi" CVScreenId="2acb5f67-e587-42ed-86af-e3c65821ae9b" CvElementArea="760, 233, 18, 18" CvType="CheckBox" DesignTimeRectangle="761, 236, 17, 16" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='oOutputTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='oNatCd' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='oOutputTable' tag='TABLE' /&gt;&lt;webctrl id='oNatCd' type='checkbox' tag='INPUT' class='' aaname='JPN' /&gt;" Guid="8e1f7f11-a841-4d16-b112-a92d57e22006" InformativeScreenshot="6b4e6bf2d63c1df5792c5ac3888ca57c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='NatiList' title='국적코드 검색' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                           <uix:Target CVScreenId="2acb5f67-e587-42ed-86af-e3c65821ae9b" CvTextArea="753, 203, 31, 17" CvTextArgument="NE!" CvType="Text" DesignTimeRectangle="719, 200, 100, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl id='oOutputTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='선택' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='oOutputTable' tag='TABLE' /&gt;&lt;webctrl aaname='선택' type='' tag='TH' class='thTitle 80' check:innerText='선택' /&gt;" Guid="935ab793-1877-47a2-b8f8-af104066db56" SearchSteps="FuzzySelector, CV" />
                         </scg:List>
                       </uix:TargetAnchorable.Anchors>
@@ -249,23 +249,10 @@
                 </uix:SearchedElement>
               </uix:NMouseScroll.SearchedElement>
             </uix:NMouseScroll>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '확인'" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fc861434-ddc3-4470-988a-45c0e24ccb21" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '확인'" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fc861434-ddc3-4470-988a-45c0e24ccb21" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/NatiCdListR.isi" CVScreenId="2acb5f67-e587-42ed-86af-e3c65821ae9b" CvElementArea="405, 481, 59, 26" CvTextArea="423, 487, 31, 16" CvTextArgument="3191" CvType="Button" DesignTimeRectangle="408, 484, 55, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='10' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='확인' check:innerText='확인' /&gt;" Guid="4608080c-525e-472a-8a57-820e48c78f59" InformativeScreenshot="b2c1c67778a3ebfede370bed6512b19e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='NatiList' title='국적코드 검색' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="Label '확인'" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Target>
-                    <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/NatiCdListR.isi" CVScreenId="2acb5f67-e587-42ed-86af-e3c65821ae9b" CvElementArea="405, 481, 59, 26" CvTextArea="423, 487, 31, 16" CvTextArgument="3191" CvType="Button" DesignTimeRectangle="408, 484, 55, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='10' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='확인' check:innerText='확인' /&gt;" Guid="a27be01f-e23d-4455-8b4d-ad7a19279a3e" InformativeScreenshot="b2c1c67778a3ebfede370bed6512b19e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='NatiList' title='국적코드 검색' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                  </uix:VerifyExecutionOptions.Target>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
             </uix:NClick>
           </Sequence>
         </ActivityAction>
