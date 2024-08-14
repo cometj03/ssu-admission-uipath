@@ -1,0 +1,209 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SelectImage" this:SelectImage.folderPath="C:\Users\harry\OneDrive\Desktop" this:SelectImage.imageFileName="865461001.jpg" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="folderPath" Type="InArgument(x:String)" />
+    <x:Property Name="imageFileName" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>859.2,1428.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SelectImage" sap:VirtualizedContainerService.HintSize="512,1364" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 외국인 유학생정보 시스템" sap:VirtualizedContainerService.HintSize="449.6,1275.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1fd254b9-0cc9-460f-bf0a-c383b4de11e9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1035.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '유학생사진등록'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1fd254b9-0cc9-460f-bf0a-c383b4de11e9" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" DesignTimeRectangle="528, 654, 627, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl id='oPhoto' tableRow='6' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl id='oPhoto' type='file' tag='INPUT' class='file' aaname='유학생사진등록' /&gt;" Guid="4904e5d2-c622-4a1a-9d03-7b7e1b6bd298" InformativeScreenshot="861256c5b8764eecd5267b61ad3badd2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="fcc4a348-afdb-409e-8e43-cefbd31f8b59" CvTextArea="368, 656, 106, 17" CvTextArgument="sSMARNSE" CvType="Text" DesignTimeRectangle="370, 658, 105, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='유학생사진등록' check:innerText='유학생사진등록' /&gt;" Guid="8308c5dd-793f-4fa8-a6b2-a6f4d7fa7ea4" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '이전 위치'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1fd254b9-0cc9-460f-bf0a-c383b4de11e9" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="612b1065-f30f-4392-930d-a92b9e6cce1b" CvElementArea="179, 47, 493, 45" CvType="InputBox" DesignTimeRectangle="579, 48, 47, 47" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='주소 대역' /&gt;&lt;ctrl name='주소 대역' role='tool bar' /&gt;&lt;ctrl name='이전 위치' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='주소 대역' /&gt;&lt;ctrl name='주소 대역' role='tool bar' /&gt;&lt;ctrl name='이전 위치' role='push button' automationid='' check:text='이전 위치' /&gt;" Guid="ec0abc3b-d34a-4ae2-81ad-043399f0fffe" InformativeScreenshot="45a2fe103cdddfda806a85a5d1ec4777.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="626, 48, 47, 47" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='주소 대역' /&gt;&lt;ctrl name='주소 대역' role='tool bar' /&gt;&lt;ctrl name='&amp;quot;바탕 화면&amp;quot; 새로 고침(F5)' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd cls='ToolbarWindow32' title='주소 대역' /&gt;&lt;ctrl name='주소 대역' role='tool bar' /&gt;&lt;ctrl name='&amp;quot;바탕 화면&amp;quot; 새로 고침(F5)' role='push button' automationid='' check:text='&amp;quot;바탕 화면&amp;quot; 새로 고침(F5)' /&gt;" Guid="6b334b94-ed64-492e-b0b4-0ea30f412224" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="1fd254b9-0cc9-460f-bf0a-c383b4de11e9" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" DesignTimeRectangle="182, 48, 397, 44" DesignTimeScaleFactor="1.25" ElementType="Toolbar" FullSelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='1001' title='주소: C:\Users\harry\OneDrive\Desktop' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='1001' title='주소: C:\Users\harry\OneDrive\Desktop' /&gt;" Guid="2a2f6146-bde4-4149-b4a6-cc3246e68a08" InformativeScreenshot="cdcb7e5fb2360980cd30a464c28f3206.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="190, 48, 389, 44" ElementType="Toolbar" FullSelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='1001' title='주소: C:\Users\harry\OneDrive\Desktop' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='로드 중' cls='msctls_progress32' /&gt;&lt;wnd ctrlid='1001' title='주소: C:\Users\harry\OneDrive\Desktop' /&gt;" Guid="688be68b-1480-4032-ad93-9f82056f8732" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">folderPath + "[k(Enter)]"</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '파일 이름(&amp;N)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="1fd254b9-0cc9-460f-bf0a-c383b4de11e9" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="489dd5c6-ae2d-4aae-b45b-c574b64e5aad" CvElementArea="273, 607, 407, 32" CvType="InputBox" DesignTimeRectangle="278, 614, 376, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="d2170eaa-70b9-4d72-9c2b-0ba65116940e" InformativeScreenshot="e806e3433bad2fa65bdc1c827286c35d.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="489dd5c6-ae2d-4aae-b45b-c574b64e5aad" CvTextArea="174, 612, 93, 21" CvTextArgument="I}2 015(N:" CvType="Text" DesignTimeRectangle="177, 614, 89, 20" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlid='1090' title='파일 이름(&amp;amp;N):' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='파일 이름(&amp;amp;N):' check:text='파일 이름(&amp;amp;N):' /&gt;" Guid="9f0b5268-c80a-4776-9cee-a17362d9beb2" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">imageFileName + "[k(Enter)]"</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABCdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gMTAwCrt8d6MAAAIzSURBVDhPdZHfUxJRFMf903qr/6Gppx6MmqZ3ZyyaXpy0iTFjSkEMlSF/INqIYMavUYIVFFjcgWWBZXeBlNYfBAv7457u7tJkNn3n3odz7/nc873njMB/hAwNA1M4QvAvoAFSQJMAXQF0EEgaDBAo+jnWTQC/ocmAOqA2oE2ATKnAy3ChQE8FGSEVp/wNaAi0Lsh8fd9NeMeEI+fGro1TimeakK8cazqDRgxjuoam1QuN2hL8Vspl6VGuSMHhSMwEi5sJOiZjb9eBoRSR80/WXU/Sr+52yYUo5xldsgSbO5mzwz5IOmD8Rv+QUQBbFfNz45JvIjtlqcbnVsuf7szcmyUXNnI+CSScZgJ6a3Ad3AtQulmPnXK/Lvnnm1xqiQ/enn1ozy1+ZaM96OsAzjMaqUcdFa4kpc3xoe2AY2V9hTy8NfXoafz9RHiehXYfNNwUHZABfsgQzTMRsorXJUCUrN9/aXu+vTO69mEPeC8ZPwe1D2gI9ADWv1GeVO3xm+VYXWpoQIlqpi0V+ogFqAKcAnRNw6alSxUeWKfXCqLVG3sXOo4x4jO725cqfNw7WPxysBpJLgfCrY70B8D0mM0ZIBvjDp9zl9hKku5Q7K0vNOnZ9IQJ1+fwi2mHOLhW4edATZ5U0tXv+0WeYJpEic0w9USJTbOnSVpI0/xRme/ikZoA3rKiUXSlVOUYoUXXeLrG1YRWs33OCM0cVcqeFMs1TlJU/PQQMEZmhjeFR2ms37cAvwDn8akHoSXZUQAAAABJRU5ErkJggg==" InformativeScreenshot="52bfada1b187e0b26ec6e9d5f637c79e.jpg" Selector="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" Title="외국인 유학생정보 시스템" Url="https://www.hikorea.go.kr/isi/index.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
