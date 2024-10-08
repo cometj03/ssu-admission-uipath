@@ -12,23 +12,25 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "passportAppeared&Sequence_11",
-        "fullImagePath&Sequence_4",
-        "chk&Sequence_4",
-        "fileName&Sequence_4",
-        "imageFolderPath&Sequence_1",
+        "excelFilePath&Sequence_1",
         "dt&Sequence_1",
-        "excelFilePath&Sequence_1"
+        "imageFolderPath&Sequence_1",
+        "fileName&Sequence_4",
+        "chk&Sequence_4",
+        "fullImagePath&Sequence_4",
+        "passportAppeared&Sequence_11"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "PersonalInfo/PopupPersonalInfo.xaml",
+      "Path": "PersonalInfo/PersonalInfoEntry.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "absoluteImageFilePath",
+        "sex",
         "nation",
         "passportId",
         "birthdate",
@@ -38,7 +40,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "PersonalInfo/PopupNationality.xaml",
+      "Path": "PersonalInfo/SelectNation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -52,8 +54,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "imageFileName",
-        "folderPath"
+        "absoluteFilePath"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
