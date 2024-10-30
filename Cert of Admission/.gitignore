@@ -1,0 +1,12 @@
+##################################
+### OTHER IDE and TEMP files   ###
+##################################
+# UiPath RPA Development
+**/*.log
+**/.local/**
+**/.objects/**
+**/.settings/**
+**/.tmh/**
+
+#exercism
+**/.exercism/**
