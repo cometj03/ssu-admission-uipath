@@ -1,11 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.name="NAME" this:Sequence.birthdate="20240101" this:Sequence.passportId="A1234" this:Sequence.nation="일본" this:Sequence.sex="여성" this:Sequence.absoluteImageFilePath="C:\Users\harry\OneDrive\Desktop\865461001.jpg" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.name="NAME" this:Sequence.birthdate="20240101" this:Sequence.passportId="A1234" this:Sequence.nation="일본" this:Sequence.sex="여성" this:Sequence.imageFolderPath="C:\Users\harry\OneDrive\Desktop" this:Sequence.imageName="865461001" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="name" Type="InArgument(x:String)" />
     <x:Property Name="birthdate" Type="InArgument(x:String)" />
     <x:Property Name="passportId" Type="InArgument(x:String)" />
     <x:Property Name="nation" Type="InArgument(x:String)" />
     <x:Property Name="sex" Type="InArgument(x:String)" />
-    <x:Property Name="absoluteImageFilePath" Type="InArgument(x:String)" />
+    <x:Property Name="imageFolderPath" Type="InArgument(x:String)" />
+    <x:Property Name="imageName" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>1872.8,2813.6</sap:VirtualizedContainerService.HintSize>
@@ -113,7 +114,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="인적사항 입력&#xA;- 이름&#xA;- 생년월일&#xA;- 국적, 여권번호 (PopupNationality)&#xA;- 성별&#xA;- 이미지 선택 (SelectImage)" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1172,3236" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="인적사항 입력&#xA;- 이름&#xA;- 생년월일&#xA;- 국적, 여권번호 (PopupNationality)&#xA;- 성별&#xA;- 이미지 선택 (SelectImage)" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1172,3293.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -163,13 +164,13 @@
         <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABCdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gMTAwCrt8d6MAAAIzSURBVDhPdZHfUxJRFMf903qr/6Gppx6MmqZ3ZyyaXpy0iTFjSkEMlSF/INqIYMavUYIVFFjcgWWBZXeBlNYfBAv7457u7tJkNn3n3odz7/nc873njMB/hAwNA1M4QvAvoAFSQJMAXQF0EEgaDBAo+jnWTQC/ocmAOqA2oE2ATKnAy3ChQE8FGSEVp/wNaAi0Lsh8fd9NeMeEI+fGro1TimeakK8cazqDRgxjuoam1QuN2hL8Vspl6VGuSMHhSMwEi5sJOiZjb9eBoRSR80/WXU/Sr+52yYUo5xldsgSbO5mzwz5IOmD8Rv+QUQBbFfNz45JvIjtlqcbnVsuf7szcmyUXNnI+CSScZgJ6a3Ad3AtQulmPnXK/Lvnnm1xqiQ/enn1ozy1+ZaM96OsAzjMaqUcdFa4kpc3xoe2AY2V9hTy8NfXoafz9RHiehXYfNNwUHZABfsgQzTMRsorXJUCUrN9/aXu+vTO69mEPeC8ZPwe1D2gI9ADWv1GeVO3xm+VYXWpoQIlqpi0V+ogFqAKcAnRNw6alSxUeWKfXCqLVG3sXOo4x4jO725cqfNw7WPxysBpJLgfCrY70B8D0mM0ZIBvjDp9zl9hKku5Q7K0vNOnZ9IQJ1+fwi2mHOLhW4edATZ5U0tXv+0WeYJpEic0w9USJTbOnSVpI0/xRme/ikZoA3rKiUXSlVOUYoUXXeLrG1YRWs33OCM0cVcqeFMs1TlJU/PQQMEZmhjeFR2ms37cAvwDn8akHoSXZUQAAAABJRU5ErkJggg==" InformativeScreenshot="52bfada1b187e0b26ec6e9d5f637c79e.jpg" Selector="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" Title="외국인 유학생정보 시스템" Url="https://www.hikorea.go.kr/isi/index.html" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 통합 표준 입학허가서 관리 기록조회 팝업" sap:VirtualizedContainerService.HintSize="1019.2,2568" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 통합 표준 입학허가서 관리 기록조회 팝업" sap:VirtualizedContainerService.HintSize="1019.2,2625.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="985.6,2328" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="985.6,2385.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -329,10 +330,13 @@
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectImage - Invoke Workflow File (PersonalInfo\\SelectImage.xaml)" sap:VirtualizedContainerService.HintSize="952,199.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PersonalInfo\\SelectImage.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectImage - Invoke Workflow File (PersonalInfo\\SelectImage.xaml)" sap:VirtualizedContainerService.HintSize="339.2,232" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PersonalInfo\\SelectImage.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="absoluteFilePath">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">absoluteImageFilePath</CSharpValue>
+                <InArgument x:TypeArguments="x:String" x:Key="imageFolderPath">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">imageFolderPath</CSharpValue>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="imageName">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">imageName</CSharpValue>
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
