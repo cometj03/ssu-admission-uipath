@@ -297,7 +297,7 @@
                       <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/StdEntScholPermPopSearch.isi" CVScreenId="ee89df7a-560d-406c-bcb1-ca0f4422d8d3" CvElementArea="532, 169, 67, 21" CvTextArea="540, 172, 50, 14" CvTextArgument="noga" CvType="Button" DesignTimeRectangle="538, 272, 56, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='직접입력' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='직접입력' tag='A' type='' class='' check:innerText='직접입력' /&gt;" Guid="240d40a1-3ce1-40ee-ad43-961bbd97f743" InformativeScreenshot="4602ddc88de3a2c2f301cdcfc0f60aff.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='StdEntScholPermSearchPop' title='통합 표준 입학허가서 관리 기록조회 팝업' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PopupNationality - Invoke Workflow File (PopupNationality.xaml)" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PersonalInfo\\SelectNation.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PopupNationality - Invoke Workflow File (PopupNationality.xaml)" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="인적사항\\SelectNation.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="nation">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">nation</CSharpValue>
@@ -323,14 +323,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectSex - Invoke Workflow File (PersonalInfo\\SelectSex.xaml)" sap:VirtualizedContainerService.HintSize="952,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="PersonalInfo\\SelectSex.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectSex - Invoke Workflow File (PersonalInfo\\SelectSex.xaml)" sap:VirtualizedContainerService.HintSize="952,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="인적사항\\SelectSex.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="sex">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">sex</CSharpValue>
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectImage - Invoke Workflow File (PersonalInfo\\SelectImage.xaml)" sap:VirtualizedContainerService.HintSize="339.2,232" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PersonalInfo\\SelectImage.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectImage - Invoke Workflow File (인적사항\\SelectImage.xaml)" sap:VirtualizedContainerService.HintSize="335.2,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="인적사항\\SelectImage.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="imageFolderPath">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">imageFolderPath</CSharpValue>
