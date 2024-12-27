@@ -127,7 +127,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1916.0000000000002,2000" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1276.0000000000002,2000" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="excelFilePath" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt" />
@@ -523,7 +523,7 @@
                         <InArgument x:TypeArguments="x:String" x:Key="sex">
                           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">CurrentRow["성별"].ToString()</CSharpValue>
                         </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="fullImageFilePath">
+                        <InArgument x:TypeArguments="x:String" x:Key="absoluteImageFilePath">
                           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">imageFolderPath + CurrentRow["유학생사진등록"].ToString() + ".jpg"</CSharpValue>
                         </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
