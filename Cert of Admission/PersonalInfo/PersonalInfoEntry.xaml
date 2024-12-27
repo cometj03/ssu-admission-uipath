@@ -50,6 +50,7 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -112,26 +113,26 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="인적사항 입력&#xD;&#xA;- 이름&#xD;&#xA;- 생년월일&#xD;&#xA;- 국적, 여권번호 (PopupNationality)&#xD;&#xA;- 성별&#xD;&#xA;- 이미지 선택 (SelectImage)" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1916.0000000000002,2136" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="인적사항 입력&#xA;- 이름&#xA;- 생년월일&#xA;- 국적, 여권번호 (PopupNationality)&#xA;- 성별&#xA;- 이미지 선택 (SelectImage)" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1172,3236" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 외국인 유학생정보 시스템" sap:VirtualizedContainerService.HintSize="449.6,528.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b7ce4659-4126-467b-a880-49261df231dd" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 외국인 유학생정보 시스템" sap:VirtualizedContainerService.HintSize="1019.2,568.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b7ce4659-4126-467b-a880-49261df231dd" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,280" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,280" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '기록조회'" sap:VirtualizedContainerService.HintSize="382.4,218.4" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7ce4659-4126-467b-a880-49261df231dd" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '기록조회'" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b7ce4659-4126-467b-a880-49261df231dd" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="7747f74b-2d0d-4d26-bffb-a529dd950b75" CvTextArea="424, 372, 51, 13" CvTextArgument="71530" CvType="Text" DesignTimeRectangle="423, 371, 56, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='기록조회' /&gt;" Guid="2a57646c-dca8-4f5a-a16d-0c3d86315816" InformativeScreenshot="e958da8b4cbbad66791562fca3b3018f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -162,19 +163,19 @@
         <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABCdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gMTAwCrt8d6MAAAIzSURBVDhPdZHfUxJRFMf903qr/6Gppx6MmqZ3ZyyaXpy0iTFjSkEMlSF/INqIYMavUYIVFFjcgWWBZXeBlNYfBAv7457u7tJkNn3n3odz7/nc873njMB/hAwNA1M4QvAvoAFSQJMAXQF0EEgaDBAo+jnWTQC/ocmAOqA2oE2ATKnAy3ChQE8FGSEVp/wNaAi0Lsh8fd9NeMeEI+fGro1TimeakK8cazqDRgxjuoam1QuN2hL8Vspl6VGuSMHhSMwEi5sJOiZjb9eBoRSR80/WXU/Sr+52yYUo5xldsgSbO5mzwz5IOmD8Rv+QUQBbFfNz45JvIjtlqcbnVsuf7szcmyUXNnI+CSScZgJ6a3Ad3AtQulmPnXK/Lvnnm1xqiQ/enn1ozy1+ZaM96OsAzjMaqUcdFa4kpc3xoe2AY2V9hTy8NfXoafz9RHiehXYfNNwUHZABfsgQzTMRsorXJUCUrN9/aXu+vTO69mEPeC8ZPwe1D2gI9ADWv1GeVO3xm+VYXWpoQIlqpi0V+ogFqAKcAnRNw6alSxUeWKfXCqLVG3sXOo4x4jO725cqfNw7WPxysBpJLgfCrY70B8D0mM0ZIBvjDp9zl9hKku5Q7K0vNOnZ9IQJ1+fwi2mHOLhW4edATZ5U0tXv+0WeYJpEic0w9USJTbOnSVpI0/xRme/ikZoA3rKiUXSlVOUYoUXXeLrG1YRWs33OCM0cVcqeFMs1TlJU/PQQMEZmhjeFR2ms37cAvwDn8akHoSXZUQAAAABJRU5ErkJggg==" InformativeScreenshot="52bfada1b187e0b26ec6e9d5f637c79e.jpg" Selector="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" Title="외국인 유학생정보 시스템" Url="https://www.hikorea.go.kr/isi/index.html" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 통합 표준 입학허가서 관리 기록조회 팝업" sap:VirtualizedContainerService.HintSize="449.6,1508" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 통합 표준 입학허가서 관리 기록조회 팝업" sap:VirtualizedContainerService.HintSize="1019.2,2568" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1268" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="985.6,2328" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '성명'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '성명'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/StdEntScholPermSearchPop.isi" CVScreenId="1c63ed7d-35ab-40cf-828f-8bce1c0df391" CvElementArea="92, 219, 141, 21" CvType="InputBox" DesignTimeRectangle="92, 220, 141, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='sEkNm' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='sEkNm' type='text' tag='INPUT' class='sch' aaname='성명' /&gt;" Guid="1b43b1b9-705e-41f5-aa8d-efcb13adea04" InformativeScreenshot="6bafce0ebf9c57c042d1d9f88dcc913d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='StdEntScholPermSearchPop' title='통합 표준 입학허가서 관리 기록조회 팝업' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -190,7 +191,7 @@
                 </InArgument>
               </uix:NTypeInto.Text>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '생년월일'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '생년월일'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/StdEntScholPermSearchPop.isi" CVScreenId="f89e6a0c-38f8-4c3c-9fcf-78ab4f509995" CvElementArea="91, 243, 78, 22" CvType="InputBox" DesignTimeRectangle="92, 244, 76, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='sBirthYmd' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='sBirthYmd' type='text' tag='INPUT' class='inputdata' aaname='생년월일' /&gt;" Guid="9a6349fc-9f0e-4aa7-8133-a2cdf3636ea8" InformativeScreenshot="4e593181e0159b577d9776f8208e68bc.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='StdEntScholPermSearchPop' title='통합 표준 입학허가서 관리 기록조회 팝업' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -216,7 +217,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="여권번호 입력 후 엔터 키 입력" ClickBeforeMode="Single" DisplayName="Type Into '여권번호'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,281.6" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="여권번호 입력 후 엔터 키 입력" ClickBeforeMode="Single" DisplayName="Type Into '여권번호'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,281.6" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/StdEntScholPermSearchPop.isi" CVScreenId="67e2c241-b92b-49e4-8947-bacff1b95f9f" CvElementArea="306, 243, 110, 22" CvType="InputBox" DesignTimeRectangle="307, 244, 108, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='sPassNo' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='sPassNo' type='text' tag='INPUT' class='inputdata' aaname='여권번호' /&gt;" Guid="3a25637f-1d2e-464d-802e-ff5936f89e76" InformativeScreenshot="5fb9f29752f649fe76b3670689952e18.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='StdEntScholPermSearchPop' title='통합 표준 입학허가서 관리 기록조회 팝업' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -237,7 +238,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NCheckState sap2010:Annotation.AnnotationText="직접입력 버튼이 생기면 클릭, 없으면 조회된 여권번호 클릭" DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="382.4,100.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="직접입력 버튼이 생기면 클릭, 없으면 조회된 여권번호 클릭" DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="952,1042.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Timeout="1" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,280" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
@@ -278,7 +279,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="416,270.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+                  <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="416,270.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
                     <uix:NMouseScroll.SearchedElement>
                       <uix:SearchedElement>
                         <uix:SearchedElement.Target>
@@ -316,86 +317,19 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <If sap2010:Annotation.AnnotationText="성별 선택" sap:VirtualizedContainerService.HintSize="382.4,88" sap2010:WorkflowViewState.IdRef="If_1">
-              <If.Condition>
-                <InArgument x:TypeArguments="x:Boolean">
-                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">sex.Contains("여")</CSharpValue>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectSex - Invoke Workflow File (PersonalInfo\\SelectSex.xaml)" sap:VirtualizedContainerService.HintSize="952,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="PersonalInfo\\SelectSex.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="sex">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">sex</CSharpValue>
                 </InArgument>
-              </If.Condition>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,276.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '012'" sap:VirtualizedContainerService.HintSize="382.4,216.8" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="1e510309-975b-4f95-9fd0-21b36ee6a105" CvElementArea="1086, 587, 21, 21" CvType="RadioButton" DesignTimeRectangle="1090, 590, 16, 17" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl id='sex2' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl id='sex2' type='radio' tag='INPUT' class='' aaname='여성' /&gt;" Guid="318a1e18-6ebd-4b65-bafa-58bcb930fa96" InformativeScreenshot="401708ad4a5597f8ff079061bc31887e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="1e510309-975b-4f95-9fd0-21b36ee6a105" CvTextArea="1108, 592, 30, 17" CvTextArgument="012" CvType="Text" DesignTimeRectangle="1110, 593, 28, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl aaname='여성' tableRow='4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl aaname='여성' type='' tag='LABEL' class='' check:innerText='여성' /&gt;" Guid="d62fc2af-6445-4b88-9828-c87f8a16970f" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,276.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SN'" sap:VirtualizedContainerService.HintSize="382.4,216.8" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e21f9399-cfac-440c-9f30-7182cd2519da" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="917cc06c-e42a-4625-9560-31fff2a23f82" CvElementArea="1027, 587, 22, 21" CvType="RadioButton" DesignTimeRectangle="1031, 590, 16, 17" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl id='sex1' type='radio' tag='INPUT' class='' aaname='남성' /&gt;" Guid="295012b0-558e-4eda-956b-64aa9285378a" InformativeScreenshot="16a955fc6ce90b9420499adbb6c75b3f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                            <uix:Target CVScreenId="917cc06c-e42a-4625-9560-31fff2a23f82" CvTextArea="1049, 592, 30, 15" CvTextArgument="SN" CvType="Text" DesignTimeRectangle="1051, 593, 28, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl aaname='남성' type='' tag='LABEL' class='' check:innerText='남성' /&gt;" Guid="02a8bb1e-feff-4048-b497-0dd50ee53701" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                </Sequence>
-              </If.Else>
-            </If>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectImage - Invoke Workflow File (PersonalInfo\\SelectImage.xaml)" sap:VirtualizedContainerService.HintSize="382.4,199.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PersonalInfo\\SelectImage.xaml">
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectImage - Invoke Workflow File (PersonalInfo\\SelectImage.xaml)" sap:VirtualizedContainerService.HintSize="952,199.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PersonalInfo\\SelectImage.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="absoluteFilePath">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">absoluteImageFilePath</CSharpValue>
@@ -406,7 +340,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="590, -763, 658, 391" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABCdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gMTAwCrt8d6MAAAIzSURBVDhPdZHfUxJRFMf903qr/6Gppx6MmqZ3ZyyaXpy0iTFjSkEMlSF/INqIYMavUYIVFFjcgWWBZXeBlNYfBAv7457u7tJkNn3n3odz7/nc873njMB/hAwNA1M4QvAvoAFSQJMAXQF0EEgaDBAo+jnWTQC/ocmAOqA2oE2ATKnAy3ChQE8FGSEVp/wNaAi0Lsh8fd9NeMeEI+fGro1TimeakK8cazqDRgxjuoam1QuN2hL8Vspl6VGuSMHhSMwEi5sJOiZjb9eBoRSR80/WXU/Sr+52yYUo5xldsgSbO5mzwz5IOmD8Rv+QUQBbFfNz45JvIjtlqcbnVsuf7szcmyUXNnI+CSScZgJ6a3Ad3AtQulmPnXK/Lvnnm1xqiQ/enn1ozy1+ZaM96OsAzjMaqUcdFa4kpc3xoe2AY2V9hTy8NfXoafz9RHiehXYfNNwUHZABfsgQzTMRsorXJUCUrN9/aXu+vTO69mEPeC8ZPwe1D2gI9ADWv1GeVO3xm+VYXWpoQIlqpi0V+ogFqAKcAnRNw6alSxUeWKfXCqLVG3sXOo4x4jO725cqfNw7WPxysBpJLgfCrY70B8D0mM0ZIBvjDp9zl9hKku5Q7K0vNOnZ9IQJ1+fwi2mHOLhW4edATZ5U0tXv+0WeYJpEic0w9USJTbOnSVpI0/xRme/ikZoA3rKiUXSlVOUYoUXXeLrG1YRWs33OCM0cVcqeFMs1TlJU/PQQMEZmhjeFR2ms37cAvwDn8akHoSXZUQAAAABJRU5ErkJggg==" InformativeScreenshot="ab6dcb06f47aa683b4999d050285f918.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='StdEntScholPermSearchPop' title='통합 표준 입학허가서 관리 기록조회 팝업' /&gt;" Title="통합 표준 입학허가서 관리 기록조회 팝업" Url="https://www.hikorea.go.kr/isi/StdEntScholPermSearchPop.isi" />
+        <uix:TargetApp Area="590, -763, 658, 391" BrowserType="Chrome" ContentHash="XTP4FaVWjkWVFJTRmfXTUw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABCdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gMTAwCrt8d6MAAAIzSURBVDhPdZHfUxJRFMf903qr/6Gppx6MmqZ3ZyyaXpy0iTFjSkEMlSF/INqIYMavUYIVFFjcgWWBZXeBlNYfBAv7457u7tJkNn3n3odz7/nc873njMB/hAwNA1M4QvAvoAFSQJMAXQF0EEgaDBAo+jnWTQC/ocmAOqA2oE2ATKnAy3ChQE8FGSEVp/wNaAi0Lsh8fd9NeMeEI+fGro1TimeakK8cazqDRgxjuoam1QuN2hL8Vspl6VGuSMHhSMwEi5sJOiZjb9eBoRSR80/WXU/Sr+52yYUo5xldsgSbO5mzwz5IOmD8Rv+QUQBbFfNz45JvIjtlqcbnVsuf7szcmyUXNnI+CSScZgJ6a3Ad3AtQulmPnXK/Lvnnm1xqiQ/enn1ozy1+ZaM96OsAzjMaqUcdFa4kpc3xoe2AY2V9hTy8NfXoafz9RHiehXYfNNwUHZABfsgQzTMRsorXJUCUrN9/aXu+vTO69mEPeC8ZPwe1D2gI9ADWv1GeVO3xm+VYXWpoQIlqpi0V+ogFqAKcAnRNw6alSxUeWKfXCqLVG3sXOo4x4jO725cqfNw7WPxysBpJLgfCrY70B8D0mM0ZIBvjDp9zl9hKku5Q7K0vNOnZ9IQJ1+fwi2mHOLhW4edATZ5U0tXv+0WeYJpEic0w9USJTbOnSVpI0/xRme/ikZoA3rKiUXSlVOUYoUXXeLrG1YRWs33OCM0cVcqeFMs1TlJU/PQQMEZmhjeFR2ms37cAvwDn8akHoSXZUQAAAABJRU5ErkJggg==" InformativeScreenshot="ab6dcb06f47aa683b4999d050285f918.jpg" Reference="5cmMIl_TBkiIRJDn53dVYw/49eUlQJkekWO8Pt2b_bI-w" Selector="&lt;html app='chrome.exe' htmlwindowname='StdEntScholPermSearchPop' title='통합 표준 입학허가서 관리 기록조회 팝업' /&gt;" Title="통합 표준 입학허가서 관리 기록조회 팝업" Url="https://www.hikorea.go.kr/isi/StdEntScholPermSearchPop.isi" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
