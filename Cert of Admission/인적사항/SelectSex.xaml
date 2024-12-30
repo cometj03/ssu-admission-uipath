@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.sex="남성" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.성별="남" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="sex" Type="InArgument(x:String)" />
+    <x:Property Name="성별" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -103,28 +103,28 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1172,1008" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1172,1009.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 외국인 유학생정보 시스템" sap:VirtualizedContainerService.HintSize="484.8,984.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ecce17ba-66b4-44a0-922f-cedb8a5e0a42" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 외국인 유학생정보 시스템" sap:VirtualizedContainerService.HintSize="484.8,986.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ecce17ba-66b4-44a0-922f-cedb8a5e0a42" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="451.2,744.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="451.2,746.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If sap:VirtualizedContainerService.HintSize="417.6,683.2" sap2010:WorkflowViewState.IdRef="If_1">
+            <If sap:VirtualizedContainerService.HintSize="417.6,684.8" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">sex.Contains("여")</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">성별.Contains("여")</CSharpValue>
                 </InArgument>
               </If.Condition>
               <If.Then>
@@ -138,7 +138,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="61920969-f231-4f12-9ce0-eb1505533f05" CvTextArea="1107, 617, 30, 16" CvTextArgument="02" CvType="Text" DesignTimeRectangle="1110, 618, 28, 17" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl aaname='여성' type='' tag='LABEL' class='' check:innerText='여성' /&gt;" Guid="d0887d5d-de61-49a1-b976-ac5eac7f2d10" InformativeScreenshot="adc706428450cb8052645ebbbe11eec4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="61920969-f231-4f12-9ce0-eb1505533f05" CvTextArea="866, 615, 31, 17" CvTextArgument="9L" CvType="Text" DesignTimeRectangle="852, 608, 167, 34" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl type='' class='tdLabel necessary' tag='TH' aaname='' check:innerText='성별' /&gt;" Guid="0e15be2d-a6a7-47fa-8cdf-8f9c00d7de10" SearchSteps="FuzzySelector, CV" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -168,7 +168,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="61920969-f231-4f12-9ce0-eb1505533f05" CvTextArea="1049, 616, 30, 17" CvTextArgument="=2" CvType="Text" DesignTimeRectangle="1051, 618, 28, 17" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl aaname='남성' type='' tag='LABEL' class='' check:innerText='남성' /&gt;" Guid="76abe458-2a9d-4add-bd1e-e32bf9b8c066" InformativeScreenshot="683fea99b2536000ba819e63c77db095.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="61920969-f231-4f12-9ce0-eb1505533f05" CvTextArea="866, 615, 31, 17" CvTextArgument="9L" CvType="Text" DesignTimeRectangle="852, 608, 167, 34" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='표준입학허가서 국외체류자 등록표준입학허가서 국외체류자 등록(표준입학허가서구분, 주야구분, 입학허가서등록일자, 출생국가 등) 정보 입력' tag='TABLE' /&gt;&lt;webctrl type='' class='tdLabel necessary' tag='TH' aaname='' check:innerText='성별' /&gt;" Guid="e5d15aa4-73d0-4818-b2f3-6690bdfc2c77" SearchSteps="FuzzySelector, CV" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>

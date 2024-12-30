@@ -163,7 +163,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '파일 이름(&amp;N)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="1fd254b9-0cc9-460f-bf0a-c383b4de11e9" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0" DisplayName="Type Into '파일 이름(&amp;N)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" ScopeIdentifier="1fd254b9-0cc9-460f-bf0a-c383b4de11e9" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="489dd5c6-ae2d-4aae-b45b-c574b64e5aad" CvElementArea="273, 607, 407, 32" CvType="InputBox" DesignTimeRectangle="278, 614, 376, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="d2170eaa-70b9-4d72-9c2b-0ba65116940e" InformativeScreenshot="e806e3433bad2fa65bdc1c827286c35d.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
