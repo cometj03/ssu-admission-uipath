@@ -6,15 +6,15 @@
   "dependencies": {
     "UiPath.Excel.Activities": "[2.23.4]",
     "UiPath.Mail.Activities": "[1.23.1]",
-    "UiPath.System.Activities.Runtime": "[24.10.3]",
+    "UiPath.System.Activities": "[24.10.3]",
     "UiPath.Testing.Activities": "[24.10.0]",
-    "UiPath.UIAutomation.Activities.Runtime": "[24.11.1-preview]"
+    "UiPath.UIAutomation.Activities": "[24.11.1-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.1.0",
+  "projectVersion": "1.1.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -31,8 +31,7 @@
     "readyForPiP": false,
     "startsInPiP": false,
     "mustRestoreAllDependencies": true,
-    "pipType": "ChildSession",
-    "robotVersion": "25.0.157"
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -46,10 +45,6 @@
     },
     "fileInfoCollection": [],
     "saveToCloud": false
-  },
-  "arguments": {
-    "input": [],
-    "output": []
   },
   "expressionLanguage": "CSharp",
   "entryPoints": [
