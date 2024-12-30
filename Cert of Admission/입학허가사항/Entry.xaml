@@ -1,7 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Entry" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Entry" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="admissionType" Type="InArgument(x:String)" />
     <x:Property Name="schoolName" Type="InArgument(x:String)" />
+    <x:Property Name="입학유형" Type="InArgument(x:String)" />
+    <x:Property Name="계열구분_대" Type="InArgument(x:String)" />
+    <x:Property Name="계열구분_중" Type="InArgument(x:String)" />
+    <x:Property Name="계열구분_소" Type="InArgument(x:String)" />
+    <x:Property Name="교육기간" Type="InArgument(x:String)" />
+    <x:Property Name="학과명_한글" Type="InArgument(x:String)" />
+    <x:Property Name="학과명_영어" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -40,6 +46,12 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -82,23 +94,275 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Entry" sap:VirtualizedContainerService.HintSize="1188.8,337.704" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Entry" sap:VirtualizedContainerService.HintSize="1172,2736" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="입학유형 - Invoke Workflow File (입학허가사항\\입학유형.xaml)" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="입학허가사항\\입학유형.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="admissionType">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">admissionType</CSharpValue>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="schoolName">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">schoolName</CSharpValue>
-        </InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 외국인 유학생정보 시스템" sap:VirtualizedContainerService.HintSize="484.8,2712.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f571d77b-3877-48b4-98a8-a822085d4317" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="451.2,2472.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NSelectItem DisplayName="Select Item '입학유형'" sap:VirtualizedContainerService.HintSize="417.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+              <uix:NSelectItem.Item>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">입학유형</CSharpValue>
+                </InArgument>
+              </uix:NSelectItem.Item>
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="5">
+                  <x:String>선택</x:String>
+                  <x:String>신입학</x:String>
+                  <x:String>재입학 또는 복학</x:String>
+                  <x:String>편입학</x:String>
+                  <x:String>기타</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="b1d869b6-756a-4dec-87cc-cb044cd4247f" DesignTimeRectangle="532, 527, 136, 21" DesignTimeScaleFactor="1.25" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='entScholGbCd' type='' tag='SELECT' class='' aaname='입학유형' /&gt;" Guid="84dfa31a-d944-4640-9939-861b76d31956" ImageBase64="" InformativeScreenshot="70e927809379de8051c3a0aa139c999f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="aa2ec6f7-f033-49ff-8748-3b64e8254c34" DesignTimeRectangle="370, 552, 60, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fontColor' aaname='입학유형' check:innerText='입학유형' /&gt;" Guid="fe42ccc7-41c4-44f9-b9cc-2a6f9268a4fb" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <If sap:VirtualizedContainerService.HintSize="417.6,529.6" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">입학유형.Contains("편입학")</CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,301.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '입학유형'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="aa2ec6f7-f033-49ff-8748-3b64e8254c34" DesignTimeRectangle="531, 549, 319, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='entScholGbRmk' type='text' tag='INPUT' class='inputdata' aaname='입학유형 입력' /&gt;" Guid="eebcee24-de1d-454d-810a-5c0a562528a3" InformativeScreenshot="f8fb8af6411a93ec25832ad22722ddf7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="aa2ec6f7-f033-49ff-8748-3b64e8254c34" CvTextArea="367, 551, 62, 16" CvTextArgument="gRR2" CvType="Text" DesignTimeRectangle="370, 552, 60, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='fontColor' aaname='입학유형' check:innerText='입학유형' /&gt;" Guid="d6dd7bc2-3629-4677-8185-cc86af1f3380" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.Text>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">schoolName</CSharpValue>
+                      </InArgument>
+                    </uix:NTypeInto.Text>
+                  </uix:NTypeInto>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NSelectItem DisplayName="Select Item '주야구분'" sap:VirtualizedContainerService.HintSize="417.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="주간" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="2">
+                  <x:String>주간</x:String>
+                  <x:String>야간</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="c6e24bfa-b57d-4f73-86de-5293879faf10" DesignTimeRectangle="1017, 425, 57, 21" DesignTimeScaleFactor="1.25" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='dayNightGb' type='' tag='SELECT' class='' aaname='주야구분' /&gt;" Guid="1f438c6f-b284-4b47-ad93-98e0b177569d" ImageBase64="" InformativeScreenshot="c683695de31351d3be5b0e9828ec70ee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="c6e24bfa-b57d-4f73-86de-5293879faf10" CvTextArea="870, 426, 61, 16" CvTextArgument="F0172" CvType="Text" DesignTimeRectangle="871, 427, 60, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl parentid='oDayNightGb' type='' tag='LABEL' class='' aaname='' check:innerText='주야구분' /&gt;" Guid="ec45a660-7756-4dbe-8e72-067362001430" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item '등록(예정)교육과정'" sap:VirtualizedContainerService.HintSize="417.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="학사과정(전공심화과정포함)" ScopeIdentifier="0fc05321-3a78-40e6-a685-00e3ba04cd95" Version="V4">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="9">
+                  <x:String>선택</x:String>
+                  <x:String>전문학사과정</x:String>
+                  <x:String>학사과정(전공심화과정포함)</x:String>
+                  <x:String>석사과정(학석사통합과정포함)</x:String>
+                  <x:String>박사과정(석박사통합과정포함)</x:String>
+                  <x:String>연구과정</x:String>
+                  <x:String>교환학생 학점취득과정</x:String>
+                  <x:String>일,학습 연계 유학과정</x:String>
+                  <x:String>단기유학과정</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="c6e24bfa-b57d-4f73-86de-5293879faf10" DesignTimeRectangle="532, 490, 222, 21" DesignTimeScaleFactor="1.25" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='eduCosGbCd' type='' tag='SELECT' class='' aaname='등록(예정)교육과정' /&gt;" Guid="9a569448-f508-44f0-8c99-eb5004ae6b3e" ImageBase64="" InformativeScreenshot="bec4be56bf3edab84d46078fd470b5cb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="c6e24bfa-b57d-4f73-86de-5293879faf10" CvTextArea="361, 491, 141, 18" CvTextArgument="S5(0)2R28" CvType="Text" DesignTimeRectangle="370, 492, 132, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl parentid='oEduCosGbCd' type='' tag='LABEL' class='' aaname='' check:innerText='등록(예정)교육과정' /&gt;" Guid="16ce992d-28d5-47fd-ae27-3b151400a0a0" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '교육기간'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="417.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="f21f86bd-fa60-4b6a-86df-e7f4f107726c" DesignTimeRectangle="531, 562, 53, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='eduDurMon' type='text' tag='INPUT' class='inputdata' aaname='교육기간' /&gt;" Guid="ab40363e-af0a-4366-bfe7-89be3390dc5b" InformativeScreenshot="29ace455ea682ecfb4f8e084dd2eb2e7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="f21f86bd-fa60-4b6a-86df-e7f4f107726c" DesignTimeRectangle="370, 565, 60, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='' check:innerText='교육기간' /&gt;" Guid="5e07d094-b756-4961-a45d-5108c854dadb" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">교육기간</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Select Item '계열구분'" sap:VirtualizedContainerService.HintSize="417.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_4" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+              <uix:NSelectItem.Item>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">계열구분_대</CSharpValue>
+                </InArgument>
+              </uix:NSelectItem.Item>
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String>선택</x:String>
+                  <x:String>인문</x:String>
+                  <x:String>사회</x:String>
+                  <x:String>교육</x:String>
+                  <x:String>공학</x:String>
+                  <x:String>자연</x:String>
+                  <x:String>의약</x:String>
+                  <x:String>예체능</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="8e9de20a-9687-4d3d-948a-51bcd60f7d9e" DesignTimeRectangle="1017, 479, 71, 21" DesignTimeScaleFactor="1.25" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='partyLargeGbCd' type='' tag='SELECT' class='' aaname='계열구분' /&gt;" Guid="4148dd21-dbb5-4f47-9ba7-31ecfc135466" ImageBase64="" InformativeScreenshot="c264b49265073dd8d0332bdfb80faeb4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="8e9de20a-9687-4d3d-948a-51bcd60f7d9e" CvTextArea="860, 491, 71, 16" CvTextArgument="*1272" CvType="Text" DesignTimeRectangle="871, 492, 60, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl parentid='oPartGbCd' type='' tag='LABEL' class='' aaname='' check:innerText='계열구분' /&gt;" Guid="2827ff5d-fae3-4528-ba48-1c622bdb7fd8" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'SELECT partyMediumGbCd'" sap:VirtualizedContainerService.HintSize="417.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_5" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+              <uix:NSelectItem.Item>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">계열구분_중</CSharpValue>
+                </InArgument>
+              </uix:NSelectItem.Item>
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="1">
+                  <x:String></x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="8e9de20a-9687-4d3d-948a-51bcd60f7d9e" CvElementArea="1093, 477, 103, 24" CvType="InputBox" DesignTimeRectangle="1095, 479, 100, 21" DesignTimeScaleFactor="1.25" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='partyMediumGbCd' type='' tag='SELECT' class='' aaname='계열구분 중분류 선택' /&gt;" Guid="d56403af-e2ef-46f7-88c4-a26c6a6036c9" InformativeScreenshot="07b9e3f35e20245b3d448346d3e3ec60.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="8e9de20a-9687-4d3d-948a-51bcd60f7d9e" DesignTimeRectangle="1017, 479, 71, 21" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='partyLargeGbCd' type='' tag='SELECT' class='' aaname='계열구분' /&gt;" Guid="958d13c5-4345-4719-9663-16a6f1326953" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'SELECT partySmallGbCd'" sap:VirtualizedContainerService.HintSize="417.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_6" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+              <uix:NSelectItem.Item>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">계열구분_소</CSharpValue>
+                </InArgument>
+              </uix:NSelectItem.Item>
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="1">
+                  <x:String></x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="8e9de20a-9687-4d3d-948a-51bcd60f7d9e" CvElementArea="1015, 500, 104, 24" CvType="InputBox" DesignTimeRectangle="1017, 502, 100, 21" DesignTimeScaleFactor="1.25" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='partySmallGbCd' type='' tag='SELECT' class='' aaname='계열구분 소분류 선택' /&gt;" Guid="ef244c62-a249-445f-9678-87fc1eba1f4d" InformativeScreenshot="b585fb37b6a2fd1ef5315df33b92ba6d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="8e9de20a-9687-4d3d-948a-51bcd60f7d9e" DesignTimeRectangle="1017, 479, 71, 21" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl aaname='입학신청경로입학신청경로(현지추천단체, 최종출신학교) 정보 등록' tag='TABLE' /&gt;&lt;webctrl id='partyLargeGbCd' type='' tag='SELECT' class='' aaname='계열구분' /&gt;" Guid="eb8942fc-dd68-4b53-9d90-0a3405073947" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '한글명'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="417.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="c73774cd-5b0e-4fff-987d-1e5d3fa2fe02" DesignTimeRectangle="1017, 549, 249, 24" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='dept' type='text' tag='INPUT' class='inputdata' aaname='한글명 : ' /&gt;" Guid="a57e58bd-94f7-4ad7-876e-d006344b529a" InformativeScreenshot="a9b0d7fd0f2f3c5ba73eb9725fcd7002.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="c73774cd-5b0e-4fff-987d-1e5d3fa2fe02" DesignTimeRectangle="1017, 532, 54, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname=' : ' check:innerText='한글명 :' /&gt;" Guid="de4533b0-a073-4332-99c0-75825b8254cb" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">학과명_한글</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '영문명'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="417.6,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="f571d77b-3877-48b4-98a8-a822085d4317" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/index.html" CVScreenId="c73774cd-5b0e-4fff-987d-1e5d3fa2fe02" DesignTimeRectangle="1017, 593, 249, 24" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='deptEng' type='text' tag='INPUT' class='inputdata noKR' aaname='영문명 : ' /&gt;" Guid="ede851dc-69da-4c8f-995c-79ba944ea299" InformativeScreenshot="f64ac25c0164b5df89072f0fa4c2f687.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="c73774cd-5b0e-4fff-987d-1e5d3fa2fe02" DesignTimeRectangle="1017, 576, 54, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='bodyFrame' tag='FRAME' /&gt;&lt;webctrl id='mainFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname=' : ' check:innerText='영문명 :' /&gt;" Guid="9e1bc549-d0d4-4885-99d7-90e8bc959206" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">학과명_영어</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABCdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gMTAwCrt8d6MAAAIoSURBVDhPdZLbU1JRFMb903qr/6Gppx6MmqbnmrFoenHSRseMKUUxVIa8INp4wYzbKAKCAgdPglzP4RISXggOnHP2/pp9oFGm+mY/rbV/s7516cN/RDX1htjr6wkxEVAFRAK9AuoUEkGbQmFxjfkLoDJoHWoR1SBkXoUo40JBU4VMqQr0AswDaUAW87vmoPV54XBqZXs0L38/I4VY+ogwhvZpxrq/GaBeEH6tYNfzJl2TN7niRqNvfOtk1Zf0yGj3AF0pNcE+lDc9Cb252+Bm3IKlf063VdoMnx20IDFA64Y1pBVQIddikwOSbTAyrMt4JxdPP98ZvzfBzaxEbRKk6x4I2AgVVqERsRh489uEfbokBObErdsTDw3R2W85dxMtBlCAaGNrAXUVV5JSFUTH+oZxYXmBO7g1/Oip98OgczqHaguEUA2QgZ8y3LGUi8u4uMwl4Oby91+Pvlzf7F/6uAPRynnPobZAu0ATWN7nLYHs45F5T14qEvA1NVyV4i2aAzJABWh0DHcsXap4oB9bitf0Vs97x5EnVXthMNsC8U87e7Nf9xZd/vkNZ7kuXQMN4NmIcYMrDhhtU9vBNT9ndnje2RxDllWLM2j64nw1Zqy1b1T41Vb9x+lQ5sfuiRhMlYKJXDiV9yVyoVxlPyGGkuLhqdigYIfRGausED6ZTmSElFhJZsVkVsgWyqXqeapQjvLJyPHJaVaQFLWzXwb845L/qJO6mf0N5w6pCWPkjP8AAAAASUVORK5CYII=" InformativeScreenshot="12d71529fa1287e0e5bca5a35b0395a2.jpg" Selector="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" Title="외국인 유학생정보 시스템" Url="https://www.hikorea.go.kr/isi/index.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>
