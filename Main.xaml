@@ -583,6 +583,9 @@
                         <InArgument x:TypeArguments="x:String" x:Key="개강일">
                           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">CurrentRow["개강일"].ToString()</CSharpValue>
                         </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="등록금최종납입기한">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">CurrentRow["등록금최종납입기한"].ToString()</CSharpValue>
+                        </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="382.4,270.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V4">
