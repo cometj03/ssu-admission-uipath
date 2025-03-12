@@ -139,7 +139,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1145.6000000000001,6165.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1172,7726.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="excelFilePath" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt" />
@@ -315,7 +315,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeCode ContinueOnError="{x:Null}" Code="try {&#xD;&#xA;String korean = CurrentRow[&quot;학과명(한글)&quot;].ToString();&#xD;&#xA;String eng = CurrentRow[&quot;학과명(영문)&quot;].ToString();&#xD;&#xA;String category1 = CurrentRow[&quot;대계열&quot;].ToString();&#xD;&#xA;String category2 = CurrentRow[&quot;중계열&quot;].ToString();&#xD;&#xA;String category3 = CurrentRow[&quot;소계열&quot;].ToString();&#xD;&#xA;String[] arr = new String[4]{eng, category1, category2, category3};&#xD;&#xA;departmentDict.Add(korean, arr);&#xD;&#xA;} catch (Exception e) {&#xD;&#xA;&#x9;Console.WriteLine(e.Message);&#xD;&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="382.4,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="try {&#xA;String korean = CurrentRow[&quot;학과명(한글)&quot;].ToString();&#xA;String eng = CurrentRow[&quot;학과명(영문)&quot;].ToString();&#xA;String category1 = CurrentRow[&quot;대계열&quot;].ToString();&#xA;String category2 = CurrentRow[&quot;중계열&quot;].ToString();&#xA;String category3 = CurrentRow[&quot;소계열&quot;].ToString();&#xA;String[] arr = new String[4]{eng, category1, category2, category3};&#xA;departmentDict.Add(korean, arr);&#xA;} catch (Exception e) {&#xA;&#x9;Console.WriteLine(e.Message);&#xA;}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="382.4,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
               <ui:InvokeCode.Arguments>
                 <InArgument x:TypeArguments="sd:DataRow" x:Key="CurrentRow">
                   <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">CurrentRow</CSharpValue>
@@ -334,63 +334,69 @@
         </InArgument>
       </ui:ForEachRow.DataTable>
     </ui:ForEachRow>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="폴더에 이미지가 모두 존재하는지 확인" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="819.2,100.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="폴더에 이미지가 모두 존재하는지 확인&#xD;&#xA;학과명_한글의 내용을 Sheet2에 존재하는지 확인" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="819.2,1661.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,1070.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513.6,1436" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="fileName" />
-              <Variable x:TypeArguments="x:Boolean" Name="chk" />
+              <Variable x:TypeArguments="x:Boolean" Name="chkImage" />
               <Variable x:TypeArguments="x:String" Name="fullImagePath" />
+              <Variable x:TypeArguments="x:String" Name="학과명_한글" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="유학생사진등록" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="433.6,220" sap2010:WorkflowViewState.IdRef="GetRowItem_1">
-              <ui:GetRowItem.Row>
-                <InArgument x:TypeArguments="sd:DataRow">
-                  <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">CurrentRow</CSharpValue>
-                </InArgument>
-              </ui:GetRowItem.Row>
-              <ui:GetRowItem.Value>
-                <OutArgument x:TypeArguments="x:String">
-                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">fileName</CSharpReference>
-                </OutArgument>
-              </ui:GetRowItem.Value>
-            </ui:GetRowItem>
-            <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">fullImagePath</CSharpReference>
-                </OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">imageFolderPath + "\\" + fileName + ".jpg"</CSharpValue>
-                </InArgument>
-              </Assign.Value>
-            </Assign>
-            <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="480,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">fullImagePath</CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">imageFolderPath + "\\" + CurrentRow["유학생사진등록"].ToString() + ".jpg"</CSharpValue>
+                      </InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">학과명_한글</CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">CurrentRow["학과명_한글"].ToString()</CSharpValue>
+                      </InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="480,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
               <ui:FileExistsX.Exists>
                 <OutArgument x:TypeArguments="x:Boolean">
-                  <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">chk</CSharpReference>
+                  <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">chkImage</CSharpReference>
                 </OutArgument>
               </ui:FileExistsX.Exists>
               <ui:FileExistsX.Path>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">fullImagePath</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">fullImagePath</CSharpValue>
                 </InArgument>
               </ui:FileExistsX.Path>
             </ui:FileExistsX>
-            <If sap:VirtualizedContainerService.HintSize="433.6,510.4" sap2010:WorkflowViewState.IdRef="If_1">
+            <If sap:VirtualizedContainerService.HintSize="480,519.2" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">!chk</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">!chkImage</CSharpValue>
                 </InArgument>
               </If.Condition>
               <If.Then>
@@ -403,7 +409,7 @@
                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_4">
                     <ui:MessageBox.Text>
                       <InArgument x:TypeArguments="x:Object">
-                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">fullImagePath+ " 파일이 존재하지 않습니다. 프로그램을 종료합니다."</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">fullImagePath+ " 파일이 존재하지 않습니다. 프로그램을 종료합니다.\n프로그램을 종료합니다."</CSharpValue>
                       </InArgument>
                     </ui:MessageBox.Text>
                   </ui:MessageBox>
@@ -426,6 +432,45 @@
                 </Sequence>
               </If.Else>
             </If>
+            <If sap:VirtualizedContainerService.HintSize="480,510.4" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">!departmentDict.ContainsKey(학과명_한글)</CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,291.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5">
+                    <ui:MessageBox.Text>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">"알 수 없는 학과명: " + 학과명_한글 + "\n프로그램을 종료합니다."</CSharpValue>
+                      </InArgument>
+                    </ui:MessageBox.Text>
+                  </ui:MessageBox>
+                  <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_4">
+                    <TerminateWorkflow.Reason>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">"알 수 없는 학과명: " + 학과명_한글</CSharpValue>
+                      </InArgument>
+                    </TerminateWorkflow.Reason>
+                  </TerminateWorkflow>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
@@ -436,8 +481,8 @@
       </ui:ForEachRow.DataTable>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -498,7 +543,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/MembIsiLogin.isi" CVScreenId="c2fbc0a9-d9a8-49c1-b84d-14408c7b8607" DesignTimeRectangle="89, 522, 168, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='leftFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='nMenuTreeHome4' type='' tag='A' class='node' aaname='통합 표준입학허가서 관리' check:innerText='통합 표준입학허가서 관리' /&gt;" Guid="96cfb03b-7096-4db8-9fe8-18ecd6668132" InformativeScreenshot="4e12f4b0a3900e22cebcb834ab61b7d1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="7d614ad4-6534-4c7f-83b8-13e143d7a23a" DesignTimeRectangle="65, 497, 110, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='leftFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='nMenuTreeHome3' type='' tag='A' class='nodeSel' aaname='표준입학허가서' check:innerText='표준입학허가서' /&gt;" Guid="99f76042-b88f-458b-90ba-94a19ea7dfa4" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -515,7 +560,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.hikorea.go.kr/isi/MembIsiLogin.isi" CVScreenId="c2fbc0a9-d9a8-49c1-b84d-14408c7b8607" DesignTimeRectangle="89, 522, 168, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='leftFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='nMenuTreeHome4' type='' tag='A' class='node' aaname='통합 표준입학허가서 관리' check:innerText='통합 표준입학허가서 관리' /&gt;" Guid="16805fe7-3114-42dd-876a-69fa07bfc519" InformativeScreenshot="d9aa51d947168752472faa0ecda990e9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='외국인 유학생정보 시스템' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="7d614ad4-6534-4c7f-83b8-13e143d7a23a" DesignTimeRectangle="65, 497, 110, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='leftFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='nMenuTreeHome3' type='' tag='A' class='nodeSel' aaname='표준입학허가서' check:innerText='표준입학허가서' /&gt;" Guid="a12c41dc-8a97-4a1f-ba3f-88ff089544c4" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -605,7 +650,7 @@
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">학과명_한글</CSharpReference>
+                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">학과명_한글</CSharpReference>
                               </OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
